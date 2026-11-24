@@ -206,6 +206,7 @@ async function loadLazy(doc) {
 function loadDelayed() {
   import('./consent-check.js');
   // load anything that can be postponed to the latest here
+  window.setTimeout(() => import('./delayed.js'), 6000);
 }
 
 async function loadPage() {
